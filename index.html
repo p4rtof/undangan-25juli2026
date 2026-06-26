@@ -1,213 +1,484 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="theme-color" content="#A9805D">
-<title>Undangan Pernikahan Salwa & Awaludin</title>
-<meta name="description" content="Undangan Pernikahan Salwa & Awaludin — Sabtu, 25 Juli 2026, Gedung GOR Youth Center, Jakarta Timur">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./output.css">
-<style>
-  :root{
-    --ink:#3D332B;
-    --cream:#FAF6F0;
-    --brown:#A9805D;
-    --brown-deep:#7C5C3E;
-    --brown-line: rgba(169,128,93,0.35);
-    --body:#5C5147;
-  }
-  *{ -webkit-tap-highlight-color: transparent; }
-  html{ scroll-behavior:smooth; }
-  body{
-    font-family:'Jost',sans-serif;
-    background:var(--cream);
-    color:var(--ink);
-  }
-  .font-display{ font-family:'Cormorant Garamond',serif; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#FAF6F0">
+    <title>Undangan Pernikahan Salwa & Awaludin</title>
+    <meta name="description"
+        content="Undangan Pernikahan Salwa & Awaludin — Sabtu, 25 Juli 2026, Gedung GOR Youth Center, Jakarta Timur">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --ink: #33291F;
+            --cream: #FAF6F0;
+            --line: rgba(51, 41, 31, 0.12);
+            --body: #73655A;
+            --muted: #A89A8C;
+        }
 
-  @keyframes fadeUp{ from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:translateY(0);} }
-  .reveal{ opacity:0; animation:fadeUp .7s ease forwards; }
-  @media (prefers-reduced-motion: reduce){
-    .reveal{ animation:none; opacity:1; }
-    html{ scroll-behavior:auto; }
-  }
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
 
-  .tap{ min-height:48px; }
-  .tabular{ font-variant-numeric: tabular-nums; }
+        html {
+            scroll-behavior: smooth;
+        }
 
-  .frame{ max-width:430px; }
-  @media (min-width:431px){
-    .frame{ box-shadow:0 24px 50px -22px rgba(124,92,62,0.25); min-height:100vh; }
-  }
-</style>
+        body {
+            margin: 0;
+            font-family: 'Jost', sans-serif;
+            background: var(--cream);
+            color: var(--ink);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .reveal {
+            opacity: 0;
+            animation: fadeUp .8s ease forwards;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal {
+                animation: none;
+                opacity: 1;
+            }
+
+            html {
+                scroll-behavior: auto;
+            }
+        }
+
+        .frame {
+            max-width: 430px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        @media (min-width:431px) {
+            .frame {
+                min-height: 100vh;
+                box-shadow: 0 30px 60px -30px rgba(51, 41, 31, 0.18);
+            }
+        }
+
+        section,
+        footer {
+            padding: 0 2rem;
+        }
+
+        .sec {
+            padding-top: 4.5rem;
+            padding-bottom: 4.5rem;
+        }
+
+        .sec+.sec {
+            border-top: 1px solid var(--line);
+        }
+
+        .eyebrow {
+            font-size: 11px;
+            letter-spacing: .28em;
+            text-transform: uppercase;
+            color: var(--muted);
+            text-align: center;
+            margin: 0;
+        }
+
+        .rule {
+            width: 28px;
+            height: 1px;
+            background: var(--line);
+            margin: 2rem auto;
+        }
+
+        .rule-strong {
+            width: 28px;
+            height: 1px;
+            background: var(--ink);
+            opacity: .4;
+            margin: 2rem auto;
+        }
+
+        h1 {
+            font-size: clamp(2.6rem, 11vw, 3.2rem);
+            font-weight: 500;
+            text-align: center;
+            margin: 1.5rem 0 0;
+            line-height: 1.1;
+            letter-spacing: .01em;
+        }
+
+        .sub {
+            text-align: center;
+            font-size: 14px;
+            color: var(--body);
+            margin: .3rem 0 0;
+        }
+
+        .sub-serif {
+            text-align: center;
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            color: var(--ink);
+            font-size: 17px;
+            margin: .2rem 0 0;
+        }
+
+        .quote {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 18px;
+            line-height: 1.65;
+            text-align: center;
+            color: var(--ink);
+            margin: 0;
+        }
+
+        .src {
+            text-align: center;
+            font-size: 10px;
+            letter-spacing: .22em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin: 1rem 0 0;
+        }
+
+        .lead {
+            text-align: center;
+            font-size: 14px;
+            line-height: 1.85;
+            color: var(--body);
+            margin: 2rem 0 0;
+        }
+
+        .couple {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2.75rem;
+        }
+
+        .who {
+            text-align: center;
+        }
+
+        .who p:first-child {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 27px;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .who p:last-child {
+            font-size: 13px;
+            line-height: 1.8;
+            color: var(--body);
+            margin: .6rem 0 0;
+        }
+
+        .amp {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 16px;
+            color: var(--muted);
+        }
+
+        .cd {
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            gap: 1.1rem;
+        }
+
+        .cd .u {
+            text-align: center;
+        }
+
+        .cd .n {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            font-size: 2.2rem;
+            font-variant-numeric: tabular-nums;
+            line-height: 1;
+            margin: 0;
+        }
+
+        .cd .l {
+            display: block;
+            font-size: 9px;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-top: .5rem;
+        }
+
+        .cd .colon {
+            font-size: 1.4rem;
+            color: var(--line);
+            transform: translateY(-4px);
+        }
+
+        .ev {
+            text-align: center;
+        }
+
+        .ev .name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 19px;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .ev .when {
+            font-size: 13px;
+            color: var(--body);
+            margin: .5rem 0 0;
+        }
+
+        .place-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 17px;
+            font-weight: 500;
+            text-align: center;
+            margin: 0;
+        }
+
+        .addr {
+            text-align: center;
+            font-size: 13px;
+            color: var(--body);
+            margin: .4rem 0 0;
+            line-height: 1.6;
+        }
+
+        .actions {
+            display: flex;
+            flex-direction: column;
+            gap: .75rem;
+            margin-top: 2.5rem;
+        }
+
+        .btn {
+            min-height: 46px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .5rem;
+            font-size: 11px;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+            border-radius: 2px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: opacity .2s ease;
+        }
+
+        .btn-primary {
+            background: var(--ink);
+            color: var(--cream);
+            border: 1px solid var(--ink);
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: var(--ink);
+            border: 1px solid var(--line);
+        }
+
+        .btn:active {
+            opacity: .7;
+        }
+
+        footer {
+            text-align: center;
+            padding-top: 4.5rem;
+            padding-bottom: 4.5rem;
+            border-top: 1px solid var(--line);
+        }
+
+        .closing-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            font-weight: 500;
+            margin: 1.5rem 0 0;
+        }
+
+        .families {
+            font-size: 9px;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: var(--muted);
+            line-height: 1.8;
+            margin: 1.2rem 0 0;
+        }
+    </style>
 </head>
-<body class="antialiased">
 
-  <main class="frame relative mx-auto bg-[var(--cream)]" style="padding-top:env(safe-area-inset-top); padding-bottom:env(safe-area-inset-bottom);">
+<body>
 
-    <!-- hero -->
-    <section class="pt-14 pb-10 px-7 text-center border-b border-[var(--brown-line)]">
-      <p class="reveal text-[11px] tracking-[0.3em] uppercase text-[var(--brown)]">The Wedding Of</p>
-      <h1 class="reveal font-display mt-4 leading-tight text-[var(--ink)]" style="font-size:clamp(2.4rem,11vw,3rem)" data-delay="1">
-        Salwa &amp; Awaludin
-      </h1>
-      <div class="reveal w-10 h-px bg-[var(--brown)] mx-auto my-6" data-delay="2"></div>
-      <p class="reveal text-[var(--body)] text-sm" data-delay="3">Sabtu, 25 Juli 2026</p>
-      <p class="reveal font-display text-[var(--brown-deep)] mt-1" style="font-size:1.05rem" data-delay="4">Jakarta Timur</p>
-    </section>
+    <main class="frame">
 
-    <!-- opening verse -->
-    <section class="px-8 py-10 text-center border-b border-[var(--brown-line)]">
-      <p class="reveal font-display italic leading-relaxed text-[var(--ink)]" style="font-size:1.1rem">
-        "Kami tidak melihat (cinta sejati) bagi dua orang yang saling mencintai seperti dalam pernikahan"
-      </p>
-      <p class="reveal mt-3 text-[11px] tracking-[0.2em] uppercase text-[var(--brown)]">HR Ibnu Majah</p>
-      <p class="reveal mt-7 text-sm leading-relaxed text-[var(--body)]">
-        Dengan memohon rahmat dan ridho Allah yang telah menciptakan makhluk-Nya berpasang&#8209;pasangan, kami mohon doa restu untuk pernikahan kami.
-      </p>
-    </section>
+        <!-- hero -->
+        <section class="sec">
+            <p class="reveal eyebrow">The Wedding Of</p>
+            <h1 class="reveal serif" data-delay="1">Salwa &amp; Awaludin</h1>
+            <div class="reveal rule" data-delay="2"></div>
+            <p class="reveal sub" data-delay="3">Sabtu, 25 Juli 2026</p>
+            <p class="reveal sub-serif" data-delay="4">Jakarta Timur</p>
+        </section>
 
-    <!-- couple profiles -->
-    <section class="px-7 py-10 border-b border-[var(--brown-line)]">
-      <div class="reveal flex flex-col items-center gap-7">
+        <!-- opening verse -->
+        <section class="sec">
+            <p class="reveal quote">&ldquo;Kami tidak melihat (cinta sejati) bagi dua orang yang saling mencintai
+                seperti dalam pernikahan&rdquo;</p>
+            <p class="reveal src">HR Ibnu Majah</p>
+            <p class="reveal lead">Dengan memohon rahmat dan ridho Allah yang telah menciptakan makhluk-Nya
+                berpasang&#8209;pasangan, kami mohon doa restu untuk pernikahan kami.</p>
+        </section>
 
-        <div class="w-full text-center">
-          <p class="font-display text-[var(--ink)]" style="font-size:1.7rem">Salwa Sungkar</p>
-          <p class="text-sm text-[var(--body)] leading-relaxed mt-2">
-            Putri pertama dari<br>
-            Bpk. Muhammad Umar Sungkar (Alm)<br>
-            &amp; Ibu Anisah Amir Balfas
-          </p>
-        </div>
+        <!-- couple profiles -->
+        <section class="sec">
+            <div class="reveal couple">
+                <div class="who">
+                    <p>Salwa Sungkar</p>
+                    <p>Putri pertama dari<br>Bpk. Muhammad Umar Sungkar (Alm)<br>&amp; Ibu Anisah Amir Balfas</p>
+                </div>
+                <div class="amp">&amp;</div>
+                <div class="who">
+                    <p>Ir. Awaludin Jawas</p>
+                    <p>Putra kedua dari<br>Bpk. Abdul Gowi Ali Jawas (Alm)<br>&amp; Ibu Faizah Ahmad Basrefan (Almh)</p>
+                </div>
+            </div>
+        </section>
 
-        <div class="font-display text-[var(--brown)] text-lg">&amp;</div>
+        <!-- countdown -->
+        <section class="sec">
+            <p class="reveal eyebrow" style="margin-bottom:2.25rem;">Menghitung Hari</p>
+            <div class="reveal cd">
+                <div class="u">
+                    <p id="cd-d" class="n">00</p><span class="l">Hari</span>
+                </div>
+                <span class="colon">:</span>
+                <div class="u">
+                    <p id="cd-h" class="n">00</p><span class="l">Jam</span>
+                </div>
+                <span class="colon">:</span>
+                <div class="u">
+                    <p id="cd-m" class="n">00</p><span class="l">Menit</span>
+                </div>
+                <span class="colon">:</span>
+                <div class="u">
+                    <p id="cd-s" class="n">00</p><span class="l">Detik</span>
+                </div>
+            </div>
+        </section>
 
-        <div class="w-full text-center">
-          <p class="font-display text-[var(--ink)]" style="font-size:1.7rem">Ir. Awaludin Jawas</p>
-          <p class="text-sm text-[var(--body)] leading-relaxed mt-2">
-            Putra kedua dari<br>
-            Bpk. Abdul Gowi Ali Jawas (Alm)<br>
-            &amp; Ibu Faizah Ahmad Basrefan (Almh)
-          </p>
-        </div>
+        <!-- event details -->
+        <section class="sec">
+            <p class="reveal eyebrow" style="margin-bottom:2.25rem;">Akad &amp; Resepsi Pernikahan</p>
 
-      </div>
-    </section>
+            <div class="reveal ev">
+                <p class="name">Akad Nikah</p>
+                <p class="when">Sabtu, 25 Juli 2026</p>
+                <p class="when">15.30 WIB &ndash; Selesai</p>
 
-    <!-- countdown -->
-    <section class="px-7 py-10 text-center border-b border-[var(--brown-line)]">
-      <p class="reveal text-[11px] tracking-[0.3em] uppercase text-[var(--brown)] mb-5">Menghitung Hari</p>
-      <div class="reveal grid grid-cols-4 gap-2">
-        <div class="border border-[var(--brown-line)] rounded-lg py-3">
-          <p id="cd-d" class="tabular font-display text-2xl text-[var(--ink)]">00</p>
-          <p class="text-[9px] tracking-widest uppercase text-[var(--brown)] mt-1">Hari</p>
-        </div>
-        <div class="border border-[var(--brown-line)] rounded-lg py-3">
-          <p id="cd-h" class="tabular font-display text-2xl text-[var(--ink)]">00</p>
-          <p class="text-[9px] tracking-widest uppercase text-[var(--brown)] mt-1">Jam</p>
-        </div>
-        <div class="border border-[var(--brown-line)] rounded-lg py-3">
-          <p id="cd-m" class="tabular font-display text-2xl text-[var(--ink)]">00</p>
-          <p class="text-[9px] tracking-widest uppercase text-[var(--brown)] mt-1">Menit</p>
-        </div>
-        <div class="border border-[var(--brown-line)] rounded-lg py-3">
-          <p id="cd-s" class="tabular font-display text-2xl text-[var(--ink)]">00</p>
-          <p class="text-[9px] tracking-widest uppercase text-[var(--brown)] mt-1">Detik</p>
-        </div>
-      </div>
-    </section>
+                <div class="rule-strong"></div>
 
-    <!-- event details -->
-    <section class="px-7 py-10 border-b border-[var(--brown-line)]">
-      <p class="reveal text-center text-[11px] tracking-[0.3em] uppercase text-[var(--brown)] mb-6">Akad &amp; Resepsi Pernikahan</p>
+                <p class="name">Resepsi</p>
+                <p class="when">Sabtu, 25 Juli 2026</p>
+                <p class="when">19.00 &ndash; 21.00 WIB</p>
 
-      <div class="reveal text-center">
-        <p class="font-display text-lg text-[var(--ink)]">Akad Nikah</p>
-        <p class="text-sm text-[var(--body)] mt-2">Sabtu, 25 Juli 2026</p>
-        <p class="text-sm text-[var(--body)]">15.30 WIB – Selesai</p>
+                <div class="rule-strong"></div>
 
-        <div class="w-10 h-px bg-[var(--brown)] mx-auto my-6"></div>
+                <p class="place-name">Gedung GOR Youth Center</p>
+                <p class="addr">Jl. Otista Raya No. 121<br>Jakarta Timur</p>
 
-        <p class="font-display text-lg text-[var(--ink)]">Resepsi</p>
-        <p class="text-sm text-[var(--body)] mt-2">Sabtu, 25 Juli 2026</p>
-        <p class="text-sm text-[var(--body)]">19.00 – 21.00 WIB</p>
+                <div class="actions">
+                    <a href="https://maps.app.goo.gl/" target="_blank" rel="noopener" class="btn btn-primary">Lihat
+                        Lokasi</a>
+                    <button id="calBtn" class="btn btn-ghost">Tambah ke Kalender</button>
+                </div>
+            </div>
+        </section>
 
-        <div class="w-10 h-px bg-[var(--brown)] mx-auto my-6"></div>
+        <!-- closing -->
+        <footer>
+            <p class="reveal lead" style="margin-top:0;">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila
+                Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kedua mempelai.</p>
+            <p class="reveal lead">Atas kehadiran dan doa restunya, kami ucapkan terima kasih.</p>
+            <p class="reveal sub-serif" style="margin-top:2rem;">Wassalamu'alaikum Warahmatullahi Wabarakatuh</p>
+            <div class="reveal rule"></div>
+            <p class="reveal closing-name">Salwa &amp; Awaludin</p>
+            <p class="reveal families">
+                Kel. Bpk. Muhammad Umar Sungkar (Alm) &amp; Ibu Anisa Amir Balfas<br>
+                Kel. Bpk. Abdul Gowi Ali Jawas (Alm) &amp; Ibu Faizah Ahmad Basrefan (Almh)
+            </p>
+        </footer>
 
-        <p class="font-display text-base text-[var(--ink)]">Gedung GOR Youth Center</p>
-        <p class="text-sm text-[var(--body)] mt-1">Jl. Otista Raya No. 121<br>Jakarta Timur</p>
+    </main>
 
-        <div class="mt-7 flex flex-col gap-2.5">
-          <a href="https://maps.app.goo.gl/" target="_blank" rel="noopener"
-             class="tap flex items-center justify-center gap-2 bg-[var(--brown)] text-white rounded-full text-xs tracking-[0.15em] uppercase active:bg-[var(--brown-deep)] transition-colors">
-            Lihat Lokasi
-          </a>
-          <button id="calBtn"
-             class="tap flex items-center justify-center gap-2 border border-[var(--brown)] text-[var(--brown-deep)] rounded-full text-xs tracking-[0.15em] uppercase active:bg-[var(--brown)] active:text-white transition-colors">
-            Tambah ke Kalender
-          </button>
-        </div>
-      </div>
-    </section>
+    <script>
+        document.querySelectorAll('[data-delay]').forEach(el => {
+            el.style.animationDelay = (parseInt(el.dataset.delay) * 0.1) + 's';
+        });
 
-    <!-- closing -->
-    <footer class="px-8 pt-10 pb-14 text-center">
-      <p class="reveal text-sm leading-relaxed text-[var(--body)]">
-        Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kedua mempelai.
-      </p>
-      <p class="reveal mt-4 text-sm text-[var(--body)]">Atas kehadiran dan doa restunya, kami ucapkan terima kasih.</p>
-      <p class="reveal mt-7 font-display italic text-[var(--brown)] text-sm tracking-wide">Wassalamu'alaikum Warahmatullahi Wabarakatuh</p>
-      <div class="reveal w-10 h-px bg-[var(--brown)] mx-auto my-7"></div>
-      <p class="reveal font-display text-[var(--ink)]" style="font-size:1.6rem">Salwa &amp; Awaludin</p>
-      <p class="reveal mt-4 text-[9px] leading-snug tracking-[0.1em] uppercase text-[var(--brown)]">
-        Kel. Bpk. Muhammad Umar Sungkar (Alm) &amp; Ibu Anisa Amir Balfas<br>
-        Kel. Bpk. Abdul Gowi Ali Jawas (Alm) &amp; Ibu Faizah Ahmad Basrefan (Almh)
-      </p>
-    </footer>
+        // Countdown to Akad: 25 July 2026, 15:30 WIB (UTC+7)
+        const target = new Date('2026-07-25T15:30:00+07:00').getTime();
+        function tick() {
+            const diff = Math.max(0, target - Date.now());
+            const d = Math.floor(diff / 86400000);
+            const h = Math.floor((diff % 86400000) / 3600000);
+            const m = Math.floor((diff % 3600000) / 60000);
+            const s = Math.floor((diff % 60000) / 1000);
+            document.getElementById('cd-d').textContent = String(d).padStart(2, '0');
+            document.getElementById('cd-h').textContent = String(h).padStart(2, '0');
+            document.getElementById('cd-m').textContent = String(m).padStart(2, '0');
+            document.getElementById('cd-s').textContent = String(s).padStart(2, '0');
+        }
+        tick();
+        setInterval(tick, 1000);
 
-  </main>
-
-<script>
-  document.querySelectorAll('[data-delay]').forEach(el=>{
-    el.style.animationDelay = (parseInt(el.dataset.delay) * 0.1) + 's';
-  });
-
-  // Countdown to Akad: 25 July 2026, 15:30 WIB (UTC+7)
-  const target = new Date('2026-07-25T15:30:00+07:00').getTime();
-  function tick(){
-    const diff = Math.max(0, target - Date.now());
-    const d = Math.floor(diff / 86400000);
-    const h = Math.floor((diff % 86400000) / 3600000);
-    const m = Math.floor((diff % 3600000) / 60000);
-    const s = Math.floor((diff % 60000) / 1000);
-    document.getElementById('cd-d').textContent = String(d).padStart(2,'0');
-    document.getElementById('cd-h').textContent = String(h).padStart(2,'0');
-    document.getElementById('cd-m').textContent = String(m).padStart(2,'0');
-    document.getElementById('cd-s').textContent = String(s).padStart(2,'0');
-  }
-  tick();
-  setInterval(tick, 1000);
-
-  // Add to calendar (.ics download)
-  document.getElementById('calBtn').addEventListener('click', () => {
-    const ics = [
-      'BEGIN:VCALENDAR','VERSION:2.0','BEGIN:VEVENT',
-      'SUMMARY:Pernikahan Salwa & Awaludin',
-      'DTSTART:20260725T083000Z',
-      'DTEND:20260725T140000Z',
-      'LOCATION:Gedung GOR Youth Center, Jl. Otista Raya No. 121, Jakarta Timur',
-      'DESCRIPTION:Akad Nikah 15.30 WIB, Resepsi 19.00-21.00 WIB',
-      'END:VEVENT','END:VCALENDAR'
-    ].join('\r\n');
-    const blob = new Blob([ics], {type:'text/calendar'});
-    const a = document.createElement('a');
-    a.href = URL.createObjectURL(blob);
-    a.download = 'Pernikahan-Salwa-Awaludin.ics';
-    a.click();
-  });
-</script>
+        // Add to calendar (.ics download)
+        document.getElementById('calBtn').addEventListener('click', () => {
+            const ics = [
+                'BEGIN:VCALENDAR', 'VERSION:2.0', 'BEGIN:VEVENT',
+                'SUMMARY:Pernikahan Salwa & Awaludin',
+                'DTSTART:20260725T083000Z',
+                'DTEND:20260725T140000Z',
+                'LOCATION:Gedung GOR Youth Center, Jl. Otista Raya No. 121, Jakarta Timur',
+                'DESCRIPTION:Akad Nikah 15.30 WIB, Resepsi 19.00-21.00 WIB',
+                'END:VEVENT', 'END:VCALENDAR'
+            ].join('\r\n');
+            const blob = new Blob([ics], { type: 'text/calendar' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'Pernikahan-Salwa-Awaludin.ics';
+            a.click();
+        });
+    </script>
 </body>
+
 </html>
