@@ -1,11 +1,213 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#A9805D">
+<title>Undangan Pernikahan Salwa & Awaludin</title>
+<meta name="description" content="Undangan Pernikahan Salwa & Awaludin — Sabtu, 25 Juli 2026, Gedung GOR Youth Center, Jakarta Timur">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./output.css">
+<style>
+  :root{
+    --ink:#3D332B;
+    --cream:#FAF6F0;
+    --brown:#A9805D;
+    --brown-deep:#7C5C3E;
+    --brown-line: rgba(169,128,93,0.35);
+    --body:#5C5147;
+  }
+  *{ -webkit-tap-highlight-color: transparent; }
+  html{ scroll-behavior:smooth; }
+  body{
+    font-family:'Jost',sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+  }
+  .font-display{ font-family:'Cormorant Garamond',serif; }
+
+  @keyframes fadeUp{ from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:translateY(0);} }
+  .reveal{ opacity:0; animation:fadeUp .7s ease forwards; }
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ animation:none; opacity:1; }
+    html{ scroll-behavior:auto; }
+  }
+
+  .tap{ min-height:48px; }
+  .tabular{ font-variant-numeric: tabular-nums; }
+
+  .frame{ max-width:430px; }
+  @media (min-width:431px){
+    .frame{ box-shadow:0 24px 50px -22px rgba(124,92,62,0.25); min-height:100vh; }
+  }
+</style>
 </head>
-<body>
-    
+<body class="antialiased">
+
+  <main class="frame relative mx-auto bg-[var(--cream)]" style="padding-top:env(safe-area-inset-top); padding-bottom:env(safe-area-inset-bottom);">
+
+    <!-- hero -->
+    <section class="pt-14 pb-10 px-7 text-center border-b border-[var(--brown-line)]">
+      <p class="reveal text-[11px] tracking-[0.3em] uppercase text-[var(--brown)]">The Wedding Of</p>
+      <h1 class="reveal font-display mt-4 leading-tight text-[var(--ink)]" style="font-size:clamp(2.4rem,11vw,3rem)" data-delay="1">
+        Salwa &amp; Awaludin
+      </h1>
+      <div class="reveal w-10 h-px bg-[var(--brown)] mx-auto my-6" data-delay="2"></div>
+      <p class="reveal text-[var(--body)] text-sm" data-delay="3">Sabtu, 25 Juli 2026</p>
+      <p class="reveal font-display text-[var(--brown-deep)] mt-1" style="font-size:1.05rem" data-delay="4">Jakarta Timur</p>
+    </section>
+
+    <!-- opening verse -->
+    <section class="px-8 py-10 text-center border-b border-[var(--brown-line)]">
+      <p class="reveal font-display italic leading-relaxed text-[var(--ink)]" style="font-size:1.1rem">
+        "Kami tidak melihat (cinta sejati) bagi dua orang yang saling mencintai seperti dalam pernikahan"
+      </p>
+      <p class="reveal mt-3 text-[11px] tracking-[0.2em] uppercase text-[var(--brown)]">HR Ibnu Majah</p>
+      <p class="reveal mt-7 text-sm leading-relaxed text-[var(--body)]">
+        Dengan memohon rahmat dan ridho Allah yang telah menciptakan makhluk-Nya berpasang&#8209;pasangan, kami mohon doa restu untuk pernikahan kami.
+      </p>
+    </section>
+
+    <!-- couple profiles -->
+    <section class="px-7 py-10 border-b border-[var(--brown-line)]">
+      <div class="reveal flex flex-col items-center gap-7">
+
+        <div class="w-full text-center">
+          <p class="font-display text-[var(--ink)]" style="font-size:1.7rem">Salwa Sungkar</p>
+          <p class="text-sm text-[var(--body)] leading-relaxed mt-2">
+            Putri pertama dari<br>
+            Bpk. Muhammad Umar Sungkar (Alm)<br>
+            &amp; Ibu Anisah Amir Balfas
+          </p>
+        </div>
+
+        <div class="font-display text-[var(--brown)] text-lg">&amp;</div>
+
+        <div class="w-full text-center">
+          <p class="font-display text-[var(--ink)]" style="font-size:1.7rem">Ir. Awaludin Jawas</p>
+          <p class="text-sm text-[var(--body)] leading-relaxed mt-2">
+            Putra kedua dari<br>
+            Bpk. Abdul Gowi Ali Jawas (Alm)<br>
+            &amp; Ibu Faizah Ahmad Basrefan (Almh)
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- countdown -->
+    <section class="px-7 py-10 text-center border-b border-[var(--brown-line)]">
+      <p class="reveal text-[11px] tracking-[0.3em] uppercase text-[var(--brown)] mb-5">Menghitung Hari</p>
+      <div class="reveal grid grid-cols-4 gap-2">
+        <div class="border border-[var(--brown-line)] rounded-lg py-3">
+          <p id="cd-d" class="tabular font-display text-2xl text-[var(--ink)]">00</p>
+          <p class="text-[9px] tracking-widest uppercase text-[var(--brown)] mt-1">Hari</p>
+        </div>
+        <div class="border border-[var(--brown-line)] rounded-lg py-3">
+          <p id="cd-h" class="tabular font-display text-2xl text-[var(--ink)]">00</p>
+          <p class="text-[9px] tracking-widest uppercase text-[var(--brown)] mt-1">Jam</p>
+        </div>
+        <div class="border border-[var(--brown-line)] rounded-lg py-3">
+          <p id="cd-m" class="tabular font-display text-2xl text-[var(--ink)]">00</p>
+          <p class="text-[9px] tracking-widest uppercase text-[var(--brown)] mt-1">Menit</p>
+        </div>
+        <div class="border border-[var(--brown-line)] rounded-lg py-3">
+          <p id="cd-s" class="tabular font-display text-2xl text-[var(--ink)]">00</p>
+          <p class="text-[9px] tracking-widest uppercase text-[var(--brown)] mt-1">Detik</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- event details -->
+    <section class="px-7 py-10 border-b border-[var(--brown-line)]">
+      <p class="reveal text-center text-[11px] tracking-[0.3em] uppercase text-[var(--brown)] mb-6">Akad &amp; Resepsi Pernikahan</p>
+
+      <div class="reveal text-center">
+        <p class="font-display text-lg text-[var(--ink)]">Akad Nikah</p>
+        <p class="text-sm text-[var(--body)] mt-2">Sabtu, 25 Juli 2026</p>
+        <p class="text-sm text-[var(--body)]">15.30 WIB – Selesai</p>
+
+        <div class="w-10 h-px bg-[var(--brown)] mx-auto my-6"></div>
+
+        <p class="font-display text-lg text-[var(--ink)]">Resepsi</p>
+        <p class="text-sm text-[var(--body)] mt-2">Sabtu, 25 Juli 2026</p>
+        <p class="text-sm text-[var(--body)]">19.00 – 21.00 WIB</p>
+
+        <div class="w-10 h-px bg-[var(--brown)] mx-auto my-6"></div>
+
+        <p class="font-display text-base text-[var(--ink)]">Gedung GOR Youth Center</p>
+        <p class="text-sm text-[var(--body)] mt-1">Jl. Otista Raya No. 121<br>Jakarta Timur</p>
+
+        <div class="mt-7 flex flex-col gap-2.5">
+          <a href="https://maps.app.goo.gl/" target="_blank" rel="noopener"
+             class="tap flex items-center justify-center gap-2 bg-[var(--brown)] text-white rounded-full text-xs tracking-[0.15em] uppercase active:bg-[var(--brown-deep)] transition-colors">
+            Lihat Lokasi
+          </a>
+          <button id="calBtn"
+             class="tap flex items-center justify-center gap-2 border border-[var(--brown)] text-[var(--brown-deep)] rounded-full text-xs tracking-[0.15em] uppercase active:bg-[var(--brown)] active:text-white transition-colors">
+            Tambah ke Kalender
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- closing -->
+    <footer class="px-8 pt-10 pb-14 text-center">
+      <p class="reveal text-sm leading-relaxed text-[var(--body)]">
+        Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kedua mempelai.
+      </p>
+      <p class="reveal mt-4 text-sm text-[var(--body)]">Atas kehadiran dan doa restunya, kami ucapkan terima kasih.</p>
+      <p class="reveal mt-7 font-display italic text-[var(--brown)] text-sm tracking-wide">Wassalamu'alaikum Warahmatullahi Wabarakatuh</p>
+      <div class="reveal w-10 h-px bg-[var(--brown)] mx-auto my-7"></div>
+      <p class="reveal font-display text-[var(--ink)]" style="font-size:1.6rem">Salwa &amp; Awaludin</p>
+      <p class="reveal mt-4 text-[9px] leading-snug tracking-[0.1em] uppercase text-[var(--brown)]">
+        Kel. Bpk. Muhammad Umar Sungkar (Alm) &amp; Ibu Anisa Amir Balfas<br>
+        Kel. Bpk. Abdul Gowi Ali Jawas (Alm) &amp; Ibu Faizah Ahmad Basrefan (Almh)
+      </p>
+    </footer>
+
+  </main>
+
+<script>
+  document.querySelectorAll('[data-delay]').forEach(el=>{
+    el.style.animationDelay = (parseInt(el.dataset.delay) * 0.1) + 's';
+  });
+
+  // Countdown to Akad: 25 July 2026, 15:30 WIB (UTC+7)
+  const target = new Date('2026-07-25T15:30:00+07:00').getTime();
+  function tick(){
+    const diff = Math.max(0, target - Date.now());
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    document.getElementById('cd-d').textContent = String(d).padStart(2,'0');
+    document.getElementById('cd-h').textContent = String(h).padStart(2,'0');
+    document.getElementById('cd-m').textContent = String(m).padStart(2,'0');
+    document.getElementById('cd-s').textContent = String(s).padStart(2,'0');
+  }
+  tick();
+  setInterval(tick, 1000);
+
+  // Add to calendar (.ics download)
+  document.getElementById('calBtn').addEventListener('click', () => {
+    const ics = [
+      'BEGIN:VCALENDAR','VERSION:2.0','BEGIN:VEVENT',
+      'SUMMARY:Pernikahan Salwa & Awaludin',
+      'DTSTART:20260725T083000Z',
+      'DTEND:20260725T140000Z',
+      'LOCATION:Gedung GOR Youth Center, Jl. Otista Raya No. 121, Jakarta Timur',
+      'DESCRIPTION:Akad Nikah 15.30 WIB, Resepsi 19.00-21.00 WIB',
+      'END:VEVENT','END:VCALENDAR'
+    ].join('\r\n');
+    const blob = new Blob([ics], {type:'text/calendar'});
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'Pernikahan-Salwa-Awaludin.ics';
+    a.click();
+  });
+</script>
 </body>
 </html>
